@@ -1,0 +1,291 @@
+<html>
+<head>
+<title>webAKT Help</title>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="#file">File</a>
+            <ul>
+                <li><a href="#file">User Name</a></li>
+                <li><a href="#exit">Exit from AKT</a></li>
+             </ul>
+        </li>
+
+        <li>
+            <a href="#file">KB</a>
+            <ul>
+                <li><a href="#kb_newkb">New Kb...</a></li>
+                <li><a href="#kb_openkb">Open Kb...</a></li>
+                <li><a href="#kb_savekb">Save Kb...</a></li>
+                <li><a href="#kb_savekbas">Save Kb As...</a></li>
+                <li><a href="#kb_savetopicaskb">Save Topic As Kb...</a></li>
+                <li>
+                   <a href="#kb_closekb">Close Kb ></a>
+                   <ul></ul>
+                </li>
+                <li>
+                   <a href="#kb_selectkb">Select Kb ></a>
+                   <ul></ul>
+                </li>
+                <li>
+                   <a href="#kb_freezeopenkb">Freeze Open Kb ></a>
+                   <ul></ul>
+                </li>
+                <li><a href="#kb_calendar">Calendar</a></li>
+                <li><a href="#kb_booleansearch">Boolean Search...</a></li>
+                <li>
+                    <a href="#kb_memos">Memos ></a>
+                    <ul>
+                        <li><a href="#kb_memo_welcome">Welcome</a></li>
+                        <li><a href="#kb_memo_statement">Statement</a></li>
+                        <li><a href="#kb_memo_source">Source</a></li>
+                        <li><a href="#kb_memo_objecthierarchy">Object hierarachy</a></li>
+                        <li><a href="#kb_memo_topichierarchy">Topic hierarchy</a></li>
+                        <li><a href="#kb_memo_diagram">Diagram</a></li>
+                        <li><a href="#kb_memo_image">Image</a></li>
+                        <li><a href="#kb_memo_category">Category</a></li>
+                        <li><a href="#kb_memo_condition">Condition</a></li>
+                    </ul>
+                </li>
+                <li><a href="#kb_formalterms">Formal Terms...</a></li>
+                <li><a href="#kb_sources">Sources...</a></li>
+                <li><a href="#kb_statements">Statements...</a></li>
+                <li><a href="#kb_derivations">Derivations...</a></li>
+                <li><a href="#kb_synonyms">Synonyms...</a></li>
+                <li><a href="#kb_objecthierarchies">Object hierarchies...</a></li>
+                <li><a href="#kb_knowledge_categories">Knowledge Categories...</a></li>
+                <li><a href="#kb_topics">Topics...</a></li>
+                <li><a href="#kb_topichierarachies">Topic Hierarchies...</a></li>
+            </ul>
+         </li>
+
+        <li>
+            <a href="#diagram">Diagram</a>
+            <ul>
+                <li>
+                   <a href="#diagram_showkbdiagrams">Show KB Diagrams ></a>
+                   <ul></ul>
+                </li>
+                <li>
+                   <a href="#diagram_hidediagrams">Hide Diagrams ></a>
+                   <ul></ul>
+                </li>
+                <li><a href="#diagram_savediagramas">Save Diagram As...</a></li>
+                <li>
+                   <a href="#diagram_deletediagram">Delete Diagram ></a>
+                   <ul></ul>
+                </li>
+                <li><a href="#diagram_deletealldiagrams">Delete All Diagrams</a></li>
+           </ul>
+        </li>
+
+        <li>
+            <a href="#tools">Tools</a>
+            <ul>
+                <li class="arrow"></li>
+                <li>
+                    <a href="#tools_useatool">Use a Tool ></a>
+                    <ul>
+                        <li>
+                            <a href="#tools_general">General ></a>
+                            <ul>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#tools_knowledgeanalysis">Knowledge Analysis ></a>
+                            <ul>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#tools_knowledgeconsistency">Knowledge Consistency ></a>
+                            <ul>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#tools_query">Query ></a>
+                            <ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                   <a href="#tool_quicktool">Quick Tool ></a>
+                   <ul></ul>
+                </li>
+                <li>
+                   <a href="#tools_toolmontage">Tool Montage ></a>
+                   <ul></ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#help">Help</a>
+            <ul>
+                <li><a href="#help_aboutakt">About AKT</a></li>
+                <li><a href="#help_aktmanualakt5">AKT Manual (old AKT5 version)</a></li>
+                <li><a href="#help_aktmanualwebakt">AKT Manual (adapted for webAKT)</a></li>
+                <li><a href="#help_aboutwebakt">About webAKT</a></li>
+                <li><a href="#help_webakt">webAKT</a></li>
+             </ul>
+        </li>
+   </ul>
+
+
+<!------------------------------------------------------------------------------------------------>
+<hr>
+<h2 id="file">File</h3>
+<p>As in AKT5, this menu does very little, and does not have the file commands one is used to in most applications - e.g. for opening 
+and closing files, printing, etc.   I have removed two redundant commands (), and added in a command for specifying your user name.</p>
+
+<h3 id="file_username">User Name</h3>
+<p>This command used for webAKT's auto-saving mechanism, which saves the current versio of the knowledge based each time you make
+a change to it. Simply enter your name in the dialog box, and it will be added as an extra identifier for the knowledge base.</p>
+
+<h3 id="file_exit">Exit from AKT</h3>
+<p>This has been retained purely because it was in AKT5.  However, web applications do not have the concept of exiting - yousimpy close 
+the browser window or navigate to another web page - so all it does is to generate a message to that effect.</p>
+
+
+<!------------------------------------------------------------------------------------------------>
+<hr>
+<h2 id="kb">KB</h2>
+<p>This menu is a key one in AKT5 for working with a knowledge base, and includes operations (e.g. for opening and closing knowldege bases) 
+which one would normally expect to fnd under the File menu.    For consistecy with AKT5, I have retained AKT5's commands for this menu.</p>
+
+<p>The main differences come to lightwhen you actually use the commands, but these are generally pretty minor.   For example, 
+there is no distinction between Save and Save As... in a web application, when saving to your local file system, since security 
+considerations prevent JavaScript writing diretly to file.  Instead, both go through a file-save dialog, like in a normal Save 
+As... command.</p>
+
+
+<h3 id="kb_newkb">New Kb...</h3>
+Use this to create a new, empty knowledge base.   (Discussions are currently (July 2021) in progress as to whether one needs to
+give a knwledge base a name, or whether it simply takes its name from the file it is saved in (as with most other applications
+in which yu can create and save a document).</p>
+
+
+<h3 id="kb_openkb">Open Kb...</h3>
+<p>This command enables you to open an already-created knowledge base which exists in your local file system (i.e. on the 
+computer you are using).   This file could be one that you have created and saved yourself, or than has been gven to you
+by someone else.</p>
+
+<p>Like AKT5, webAKT knowledge bases are saved as text files, so can be read 
+and edited in a normal text editor.   There is a
+very close correspndence between the two, though AKT5's format is slightly more human-readable (not that you should really
+need to do this.</p>
+
+
+<h3 id="kb_savekb">Save Kb...</h3>
+<p>This saes a knowledge base in a file on your computer.  Unlike a normal Save cmmand, you are presented with
+a file-save dialog, and neeed to browse to the appropriate directory and give the file a name.   As webAKT uses
+JSON format, the file should hve the extension .json (in contrast with AKT5, whch save knowlefge bases in Prolog syntax, but 
+used the extension .kb).</p>
+</p>
+
+
+<h3 id="kb_savekbas">Save Kb As...</h3>
+<p>This behaves exactly the same as the Save KB command described above.</p>
+
+
+<h3 id="kb_savetopicaskb">Save Topic As Kb...</h3>
+
+
+<h3 id="kb_closekb">Close Kb ></h3>
+<p>This command allows you to close (remove) a knowledge base from the current use of webAKT.    If only one knowledge base is 
+currentky open, then the comamnd is acted upon omediately, and it s renoved (leaving webAKT with no knowledge abses).
+If more than one knowedge base s open, then you get a submenu allowing you to chose thene you want to close.</p>
+
+<p> All refeneces to the close d knpwpedge base are removed.</p>
+
+
+<h3 id="kb_selectkb">Select Kb ></h3>
+Like aKT5, webAKT has the concept of a "current knowledge base".   This saes you from having to repatedly choose a knowledge base
+when undertaking some operation or analysis.  This command allows you to select another knowledge abse (if more than one are currently
+open),which then becomes the "current knowedge base".</p>
+
+
+<h3 id="kb_freezeopenkb">Freeze Open Kb ></h3>
+<p>This command prevents you from making any changes to a knowlege base (e.g. to stop you accidentally making a change to
+a standard, curated knowledge base).   If there is more tnan one currently open, you are presented with a submenu
+which allows you to chose the one you want to freeze.</p>
+
+
+<h3 id="kb_calendar">Calendar</h3>
+
+
+<h3 id="kb_booleansearch">Boolean Search...</h3>
+
+
+<h3 id="kb_memos">Memos ></h3>
+<p>In AKT5, a "memo" is a small amount of plain text giving extra information about one of the named components.  For example,
+a statement memo provides extra information about a particular statement (not, to avoid confusion, about the set of all
+statements).</p>
+
+<p>The one exception to this is the so-called "Welcome" memo, which actually provides several, pre-defined, types of information (metadata) about a knowledge base.
+Unlike the other memos, this information is organised into separate fields - e.g. Title, Author, Study Area, etc.   The information is presented automatically when you open a saved knowledge base, but otherwise has to be found by going to Memos > Welcome, and selecting the desored knowledge base.</p>
+
+<p>It seems to me that this approach goes beyond a simple memo, and does not give the prominence to a knowledge bases's metadata which it deserves.   I have therefore added an extra item to the KB menu (KB Metadata), and disabled the KB > Memo > Welcome command.</p>
+
+<p>As a technical aside, I have also slightly modified the format for a knowlefge base file.   The knowledge base metadata is now a top-level object within the file, with separate properties for each of the metadata fields, ratherthan the plain text entry which is difficut to parse used in the AKT5 file format.</p>
+
+
+<h3 id="kb_memo_welcome">Welcome</h3>
+<p> See note for Memos, above.  This Memo option has been replaced by the command "KB Metadata" in the KB menu.</p>
+
+<h3 id="kb_memo_statement">Statement</h3>
+<h3 id="kb_memo_source">Source</h3>
+<h3 id="kb_memo_objecthierarchy">Object hierarachy</h3>
+<h3 id="kb_memo_topichierarchy">Topic hierarchy</h3>
+<h3 id="kb_memo_diagram">Diagram</h3>
+<h3 id="kb_memo_image">Image</h3>
+<h3 id="kb_memo_category">Category</h3>
+<h3 id="kb_memo_condition">Condition</h3>
+<h3 id="kb_formalterms">Formal Terms...</h3>
+<h3 id="kb_sources">Sources...</h3>
+<h3 id="kb_statements">Statements...</h3>
+<h3 id="kb_derivations">Derivations...</h3>
+<h3 id="kb_synonyms">Synonyms...</h3>
+<h3 id="kb_objecthierarchies">Object hierarchies...</h3>
+<h3 id="kb_knowledge_categories">Knowledge Categories...</h3>
+<h3 id="kb_topics">Topics...</h3>
+<h3 id="kb_topichierarachies">Topic Hierarchies...</h3>
+
+
+
+<hr>
+<h2 id="diagram">Diagram</h3>
+<h3 id="diagram_showkbdiagrams">Show KB Diagrams ></h3>
+<h3 id="diagram_hidediagrams">Hide Diagrams ></h3>
+<h3 id="diagram_savediagramas">Save Diagram As...</h3>
+<h3 id="diagram_deletediagram">Delete Diagram ></h3>
+<h3 id="diagram_deletealldiagrams">Delete All Diagrams</h3>
+
+
+
+<hr>
+<h2 id="tools">Tools</h3>
+<h3 id="tools_useatool">Use a Tool ></h3>
+<h3 id="tools_general">General ></h3>
+<h3 id="tools_knowledgeanalysis">Knowledge Analysis ></h3>
+<h3 id="tools_knowledgeconsistency">Knowledge Consistency ></h3>
+<h3 id="tools_query">Query ></h3>
+<h3 id="tool_quicktool">Quick Tool ></h3>
+<h3 id="tools_toolmontage">Tool Montage ></h3>
+
+
+
+
+<hr>
+<h2 id="help">Help</h3>
+<h3 id="help_aboutakt">About AKT</h3>
+<h3 id="help_aktmanualakt5">AKT Manual (old AKT5 version)</h3>
+<h3 id="help_aktmanualwebakt">AKT Manual (adapted for webAKT)</h3>
+<h3 id="help_aboutwebakt">About webAKT</h3>
+<h3 id="help_webakt">webAKT</h3>
+ 
+
+</body>
+</html>
+

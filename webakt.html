@@ -1,0 +1,284 @@
+<html>
+<head>
+<!--meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='expires' content='0'>
+<meta http-equiv='pragma' content='no-cache'-->
+
+<!--link rel="stylesheet" type="text/css" href="../css/paper1.css" /-->
+
+<link type="text/css" rel="stylesheet" href="css/w3.css">
+<link type="text/css" rel="stylesheet" href="css/webakt.css" title="default">
+
+<!--link type="text/css" rel="alternative1_stylesheet" href="../css/webakt_1.css" title="alternative1"-->
+
+<link type="text/css" rel="stylesheet" href="css/joint.css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="css/jstree/style.css" />
+<link rel="stylesheet" href="css/json-viewer.css" />
+<link rel="stylesheet" href="css/treetable.css" />
+<link rel="stylesheet" href="css/treetable.theme.default.css" />
+
+<script src="js/webakt.js"></script>
+
+<style>
+.panel{display:none;}
+div.content {left:0px; top:20px;}
+#welcome {display:block;}
+.dialog_id {display:none;}
+.control_id {display:none;}
+</style>
+<!--script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script-->
+<script src="libraries/jquery-3.5.0.js"></script>
+<script src="libraries/jquery-ui.js"></script>
+
+<!-- Scripts for  JointJS diagramming -->
+<!--script src="js/jointjs/jquery.js"></script-->
+<!--script src="libraries/cola.min.js"></script-->
+<!--script src="http://marvl.infotech.monash.edu/webcola/cola.js"></script-->
+<script src="libraries/d3v4.js"></script>   <!-- Needed for cola.js -->
+<script src="libraries/jointjs/lodash.js"></script>
+<script src="libraries/jointjs/backbone.js"></script>
+<script src="libraries/jointjs/joint.js"></script>
+<script src="libraries/sorttable.js"></script>
+<script src="libraries/jstree.min.js"></script>
+<!--script src="libraries/springy_akt.js"></script-->
+<script src="libraries/springy.js"></script>
+<script src="libraries/toUnicodeVariant.js"></script><!--script src="js/springyui.js"></script-->  
+<script src="libraries/treetable.js"></script>
+
+
+<!-- webAKT main codebase -->
+<script src="js/akt5.js"></script>
+<script src="js/akttools.js"></script>
+<!--script src="js/graph.js"></script-->
+<script src="js/dialog_handlers.js"></script>
+<script src="js/dialog_openers.js"></script>
+<script src="js/hierarchies.js"></script>
+<script src="js/event_record.js"></script>
+<script src="js/json-viewer.js"></script>
+<script src="js/macros.js"></script>
+<script src="js/menu_manager.js"></script>
+<script src="js/menu_handlers.js"></script>
+<script src="js/menus.js"></script>
+<script src="js/process_statement.js"></script>
+<script src="js/webakt1.js"></script>
+
+<!-- The webAKT statement parser -->
+<script src="js/parsers/statement_parser.js"></script>
+
+
+<!-- webAKT API: classes -->
+<script src="js/classes/Kb.js"></script>
+<script src="js/classes/Diagram.js"></script>
+<script src="js/classes/FormalTerm.js"></script>
+<script src="js/classes/Hierarchy.js"></script>
+<script src="js/classes/ObjectHierarchy.js"></script>
+<script src="js/classes/Image.js"></script>
+<script src="js/classes/Source.js"></script>
+<script src="js/classes/Statement.js"></script>
+<script src="js/classes/Topic.js"></script>
+<script src="js/classes/TopicHierarchy.js"></script>
+<script src="js/classes/Panel.js"></script>
+
+
+<!-- Widgets -->
+<script src="widgets/dialog_Generic.js"></script>    <!-- Generic widget for the specific
+    "widgettes" held in widgets/code.  -->
+
+<script src="widgets/dialog_BooleanSearch.js"></script>
+<script src="widgets/dialog_FormalTerms.js"></script>
+<script src="widgets/dialog_FormalTermDetails.js"></script>
+<script src="widgets/dialog_Hierarchies.js"></script>
+<script src="widgets/dialog_Hierarchy.js"></script>
+<script src="widgets/dialog_HierarchyTree.js"></script>
+<script src="widgets/dialog_Images.js"></script>
+<script src="widgets/dialog_Macros.js"></script>
+<script src="widgets/dialog_Memos.js"></script>
+<!--script src="widgets/dialog_Metadata.js"></script-->
+<script src="widgets/dialog_SourceDetails.js"></script>
+<!--script src="widgets/dialog_Sources.js"></script-->
+<script src="widgets/dialog_StatementDetails.js"></script>
+<script src="widgets/dialog_Statements.js"></script>  <!-- Was: dialog_ViewAllStatements -->
+<!--script src="widgets/dialog_Synonyms.js"></script-->
+<script src="widgets/dialog_TopicDetails.js"></script>
+<!--script src="widgets/dialog_TopicHierarchies.js"></script-->
+<!--script src="widgets/dialog_TopicHierarchy.js"></script-->
+<script src="widgets/dialog_Topics.js"></script>
+
+
+<!-- Original Tools -->
+<script src="widgets/boolean_search.js"></script>
+<!--script src="tools/formal_terms.js"></script -->
+<!--script src="widgets/diagram.js"></script-->
+<!--script src="widgets/diagram_only.js"></script-->
+<script src="widgets/glossary.js"></script>
+<script src="widgets/display_hierarchy.js"></script>
+<script src="widgets/hierarchic_objects_usage.js"></script>
+<script src="widgets/knowledge_base_report.js"></script>
+<script src="widgets/node_template.js"></script>
+<script src="widgets/species_report.js"></script>
+<!--script src="tools/springy.js"></script-->
+<!--script src="widgets/object_summary.js"></script-->
+<script src="widgets/sources_table.js"></script>
+<script src="widgets/statements_summary.js"></script>
+<script src="widgets/topic_summary.js"></script>
+<script src="widgets/user_text.js"></script>
+
+<!-- 
+https://en.wikipedia.org/wiki/File_URI_scheme
+For Windows, seems to be 
+    <script src="file://localhost/c:/akt/tool1.js"></script>
+but check. 
+-->
+
+<script src="file://localhost/home/robert/akt/tool1.js"></script>
+
+
+<!-- Widgettes - compact widget code for the dialog_Generic widget -->
+
+<!-- Multiple-instance/single-instance widgettes -->
+<script src="widgets/widgettes/formal_terms.js"></script>
+<script src="widgets/widgettes/formal_term_details.js"></script>
+
+<script src="widgets/widgettes/hierarchies.js"></script>
+<script src="widgets/widgettes/hierarchy_details.js"></script>
+
+<script src="widgets/widgettes/images.js"></script>
+<script src="widgets/widgettes/image_details.js"></script>
+
+<script src="widgets/widgettes/sources.js"></script>
+<script src="widgets/widgettes/source_details.js"></script>
+
+<script src="widgets/widgettes/statements.js"></script>
+<script src="widgets/widgettes/statement_details.js"></script>
+
+<script src="widgets/widgettes/topics.js"></script>
+<script src="widgets/widgettes/topic_details.js"></script>
+
+<!-- Other widgettes -->
+<script src="widgets/widgettes/boolean_search.js"></script>
+<script src="widgets/widgettes/diagram.js"></script>
+<script src="widgets/widgettes/diagram_from_topic.js"></script>
+<script src="widgets/widgettes/json_viewer.js"></script>
+<script src="widgets/widgettes/metadata.js"></script>
+<!--script src="widgets/widgettes/node_template.js"></script-->
+<script src="widgets/widgettes/statement_formal_terms.js"></script>
+<script src="widgets/widgettes/synonyms.js"></script>
+<script src="widgets/widgettes/tools.js"></script>
+
+
+<!-- API -->
+
+<!--script src="js/jointjs/dijkstra_to_systo.js"></script-->
+
+<script src="kbs/atwima_anon.js"></script>
+<script src="kbs/ego_anon.js"></script>
+
+<script src="kbs/bulk_import.js"></script>
+
+<script src="images/urls_for_flickr_images.js"></script>
+
+<script src="diagrams/acheampong.js"></script>
+
+<!-- TUTORIALS -->
+<script src="tutorials/tour.js"></script>
+
+
+<!-- bulk loading from spreadsheet -->
+<script src="kbs/atwima_statements.js"></script>
+<script src="kbs/atwima_sources.js"></script>
+
+
+<link rel="shortcut icon" type="image/jpg" href="favicon.png"/>
+</head>
+
+
+<body style="overflow-x:scroll;">
+<!--script src="libraries/cola.min.js"></script-->
+<!--script src="http://marvl.infotech.monash.edu/webcola/cola.js"></script-->
+<!--script src="libraries/d3v4.js"></script-->   <!-- Needed for cola.js -->
+
+    <!-- The menubar -->
+    <div id="menus" style="position:fixed; z-index:10000; height:20px; top:0px;width:100%; background:#e0e0e0;">
+    </div>
+
+    <!-- The toolbar -->
+    <div id="toolbar" style="position:fixed; z-index:9000; height:26px; top:22px; left:10px; width:100%; background:#d0d0d0; border-bottom:solid 1px #b0b0b0;">
+        <img src="images/toolbar/new.gif" title="New KB" alt="New KB" style="float:left; width:26px; height:26px;"></img>
+        <img src="images/toolbar/open.gif" title="Open KB" alt="Open KB" style="float:left; width:26px; height:26px;"></img>
+        <img src="images/toolbar/save.gif" title="Save KB" alt="Save KB" style="float:left; width:26px; height:26px;"></img>
+        <img src="images/toolbar/saveas.gif" title="Save KB as..." alt="Save KB as..." style="flot:left; width:26px; height:26px;"></img>
+        <img src="images/toolbar/search.gif" title="Search" alt="Search" style="float:left; width:26px; height:26px;"></img>
+        
+        <div style="float:right;">
+            <div style="float:left;margin-right:4px;margin-top:5px;">Recording</div>
+            <button style="float:left;padding:3px;" onclick="AKT.openRecording()">Open</button>
+            <button style="float:left;padding:3px;" onclick="AKT.saveRecording()">Save</button>
+            <button style="float:left;padding:3px;" onclick="AKT.stopRecording()">Stop</button>
+            <button style="float:left;padding:3px;" onclick="AKT.playRecording()">Play</button>
+            <div style="float:left;margin-left:5px;margin-top:5px;margin-right:2px;">Time step:</div>
+            <input id="recording_timestep" style="float:left;width:40px;padding:3px;margin-right:15px;" type="text">1</input>
+            <!--button style="float:left;padding:3px;margin-right:15px;" onclick="AKT.showRecording()">Show</button-->
+        </div>
+    </div>
+
+    <!-- The workspace, in which all panels are displayed. -->
+    <div id="workspace" style="position:absolute;top:48px;overflow-x:scroll; width:5000px; height:5000px;background:#e0e0e0;">
+    </div>  
+
+
+    <!-- Miscellaneous dialog windows, displayed as needed. -->
+
+    <!-- File new dialog  -->
+    <div id="div_file_new_dialog" class="dialog always_on_top" style="display:none; position:absolute; border:solid 1px black; background:#d4d0c8; width:800px; left:50px;top:30px;z-index:100000">
+
+        <div>
+            <div style="float:left">File name</div>
+            <input id="input_file_new" type="text" style="float:left" value="file_name"/>
+        </div>
+
+        <button id="button_file_new" style="float:left">OK</button>
+    </div>
+
+
+
+    <!-- Node template dialog (container element for the node_template.js widget) -->
+    <div id="div_node_template_dialog" class="dialog always_on_top" style="display:none; position:absolute; border:solid 1px black; background:#d4d0c8; width:800px; left:50px;top:30px;z-index:100000">
+    </div>
+
+
+
+    <div id="save_diagram_local_storage" class="dialog always_on_top" style="display:none; position:absolute; border:solid 1px black; background:#d4d0c8;left:20px;top:40px;width:300px;height:185px;z-index:100000">
+
+        <div class="title-bar">
+            <div class="dialog_id">save_diagram_local_storage</div>save_diagram_local_storage<input type="button" value="X" class="dialog_close_button"/>
+        </div>
+
+        <div class="content" style="border:none;background:#d4d0c8; padding:10px;height:162px;">
+            <input type="text" style="float:right;" id="save_diagram_local_storage_title">
+            <label for="save_diagram_local_storage_title" style="margin-right:5px;float:right;">Diagram title</label>
+            <br/>
+            <input type="button" id="save_diagram_local_storage_ok" style="float:right;" value="OK">
+            <input type="button" id="save_diagram_local_storage_cancel" style="float:right;" value="Cancel">
+        </div>     <!-- End of content div -->
+    </div>     <!-- End of dialog window div -->
+
+
+    <div id="save_kb" class="panel dialog" style=" display:none; left:10px;top:10px;width:300px; height:130px; background:yellow;">
+
+        <div class="title-bar">
+            <div class="dialog_id">191: save_kb</div>Save KB<input type="button" value="X" class="dialog_close_button"/>
+        </div>
+
+        <div class="content" style="border:none; background:yellow;padding:20px; height:100px;">
+            <button id="create">Create file</button>
+            <!--a download="info.txt" id="downloadlink" style="display: none">Download</a-->
+            <a download="info.txt" id="downloadlink" style="display:none; border:solid 2px black; background:#e0e0e0; width:60px;margin-top:30px;">Download</a>
+            <textarea id="textbox" style="border:none; background:yellow; resize:none; disabled;"></textarea>
+        </div>     <!-- End of content div -->
+    </div>     <!-- End of dialog window div -->
+
+
+</body>
+</html>
